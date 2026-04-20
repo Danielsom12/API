@@ -2,16 +2,17 @@
 using FilmesApi.Data;
 using Microsoft.EntityFrameworkCore;
 
+
 // Fazendo a conexão com o banco e Definindo a Versão e o tipo do banco
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("FilmeConnection");
 
-builder.Services.AddDbContext<FilmeContext>(opts => 
+builder.Services.AddDbContext<FilmeContext>(opts =>
 opts.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 0))));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
