@@ -9,6 +9,7 @@ var connectionString = builder.Configuration.GetConnectionString("FilmeConnectio
 builder.Services.AddDbContext<FilmeContext>(opts => 
 opts.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 0))));
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddControllers();
 

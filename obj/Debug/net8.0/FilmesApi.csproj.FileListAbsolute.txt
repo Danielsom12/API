@@ -75,3 +75,5 @@
 /home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/FilmesApi.pdb
 /home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/FilmesApi.genruntimeconfig.cache
 /home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/ref/FilmesApi.dll
+/home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/AutoMapper.dll
+/home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

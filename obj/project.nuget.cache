@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "qCfTFt4e/GE=",
+  "dgSpecHash": "bklNObvhlY4=",
   "success": true,
   "projectFilePath": "/home/dan/Área de trabalho/dev/FilmesApi/FilmesApi.csproj",
   "expectedPackageFiles": [
+    "/home/dan/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/home/dan/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/home/dan/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/dan/.nuget/packages/microsoft.aspnetcore.openapi/8.0.25/microsoft.aspnetcore.openapi.8.0.25.nupkg.sha512",
+    "/home/dan/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/dan/.nuget/packages/microsoft.entityframeworkcore/6.0.10/microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "/home/dan/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.10/microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",
     "/home/dan/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.10/microsoft.entityframeworkcore.analyzers.6.0.10.nupkg.sha512",
@@ -34,5 +37,18 @@
     "/home/dan/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/home/dan/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.26/microsoft.netcore.app.host.linux-x64.8.0.26.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "O pacote 'AutoMapper' 12.0.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
+      "projectPath": "/home/dan/Área de trabalho/dev/FilmesApi/FilmesApi.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/dan/Área de trabalho/dev/FilmesApi/FilmesApi.csproj",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
