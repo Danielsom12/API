@@ -39,8 +39,15 @@
 /home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/FilmesApi.runtimeconfig.json
 /home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/FilmesApi.dll
 /home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/FilmesApi.pdb
+/home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Humanizer.dll
 /home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
 /home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/MySqlConnector.dll
+/home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll
 /home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/dan/Área de trabalho/dev/FilmesApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -52,6 +59,7 @@
 /home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/FilmesApi.csproj.CoreCompileInputs.cache
 /home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/FilmesApi.MvcApplicationPartsAssemblyInfo.cs
 /home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/FilmesApi.MvcApplicationPartsAssemblyInfo.cache
+/home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/FilmesApi.sourcelink.json
 /home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/rjimswa.dswa.cache.json
 /home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
 /home/dan/Área de trabalho/dev/FilmesApi/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json

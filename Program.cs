@@ -1,15 +1,23 @@
-var builder = WebApplication.CreateBuilder(args);
+// Chamando as Referencias que Iremos Usar 
+using FilmesApi.Data;
+using Microsoft.EntityFrameworkCore;
 
-// Add services to the container.
+// Fazendo a conexão com o banco e Definindo a Versão e o tipo do banco
+var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("FilmeConnection");
+
+builder.Services.AddDbContext<FilmeContext>(opts => 
+opts.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 0))));
+
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

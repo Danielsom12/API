@@ -4,18 +4,20 @@ namespace FilmesApi.Models;
 
 
 public class Filme{
-
+    
+    [Key]
+    [Required]
     public int Id {get ; set;}
     
-    // Campo Obrigatório / Limite Máximo de Caracteres 50]
+    // Campo Obrigatório / Limite Máximo de Caracteres 50
     [Required(ErrorMessage = "O Título do Filme é Obrigatório")]
     [MaxLength(50,  ErrorMessage ="O Titulo não pode ultrapassar 50 caracteres")]
-    public string Titulo {get ; set; }
+    public string Titulo {get ; set; } = string.Empty;
 
-     // Campo Obrigatório / Limite Máximo de Caracteres 50]
+     // Campo Obrigatório / Limite Máximo de Caracteres 50
     [Required(ErrorMessage = "O Genero do Filme é Obrigatório")]
     [MaxLength(50, ErrorMessage = "O Genero não pode ultrapassar 50 caracteres")]
-    public string Genero { get; set; }
+    public string Genero { get; set; } = string.Empty;
 
     // Campo Obrigatório / Duração entre 70 e 600
     [Required]

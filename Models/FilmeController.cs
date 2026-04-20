@@ -4,6 +4,7 @@ namespace FilmesApi.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using FilmesApi.Models;
 using Microsoft.Extensions.Localization;
+using FilmesApi.Data;
 
 // Definindo o Tipo de API e qual o Caminho que iremos usar --> https://localhost:7106/Filme/
 [ApiController]
@@ -11,17 +12,19 @@ using Microsoft.Extensions.Localization;
 
 // Criando a classe e Referenciando a ControllerBase -> Comandos de Api
 public class FilmeController : ControllerBase
-{
-        // Criando a Lista de Filmes e Criando o Id
-       private static List<Filme> filmes = new List<Filme>();
-        private static int id =0;
+{       // Declarando o Contexto
+        private FilmeContext _context;
 
-        // Metodo POST para inserir Informações na lista por meio de Json / Ex: {"Titulo": "Minha Mãe é uma Peça", "Genero": "Comédia", "Duracao": 85}
-        [HttpPost]
+    public FilmeController(FilmeContext context)
+    {
+        _context = context;
+    }
+
+    // Metodo POST para inserir Informações na lista por meio de Json / Ex: {"Titulo": "Minha Mãe é uma Peça", "Genero": "Comédia", "Duracao": 85}
+    [HttpPost]
         public IActionResult AdicionaFilme([FromBody]Filme filme){
-           
-           filme.Id = id++;
-           filmes.Add(filme);
+            _context.Filmes.Add(filme);
+            _context.SaveChanges();
           return CreatedAtAction(nameof(GetFilmesId), 
           new{id = filme.Id}, filme);
         }
@@ -31,13 +34,13 @@ public class FilmeController : ControllerBase
         public IEnumerable<Filme> GetFilmes([FromQuery]int skip = 0 ,
         [FromQuery] int take = 50)
     {
-        return filmes.Skip(skip).Take(take);
+        return _context.Filmes.Skip(skip).Take(take);
     }
-    // Metodo GET para exibir apenas 1 filme com base no seu Id, se não existir o id ele retorna um erro 404 NotFound
+        // Metodo GET para exibir apenas 1 filme com base no seu Id, se não existir o id ele retorna um erro 404 NotFound
         [HttpGet("{id}")]
          public IActionResult GetFilmesId(int id)
     {
-        var filme = filmes.FirstOrDefault(filme => filme.Id == id);
+        var filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
         if (filme == null) return NotFound();
         return Ok(filme);
     }
