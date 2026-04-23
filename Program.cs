@@ -1,4 +1,4 @@
-// Chamando as Referencias que Iremos Usar 
+// Chamando as Referencias que Iremos Usar.
 using FilmesApi.Data;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
