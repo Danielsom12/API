@@ -1,5 +1,6 @@
 using FilmesApi.Data;
 using FilmesApi.Repositories;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,8 @@ builder.Services.AddSwaggerGen();
 // 2. Injeção de Dependência (Dapper Session + Repo)
 builder.Services.AddScoped<DbSession>();
 builder.Services.AddScoped<IFilmeRepository, FilmeRepository>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
 var app = builder.Build();
 

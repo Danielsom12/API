@@ -1,18 +1,22 @@
 using FilmesApi.Models;
 using FilmesApi.Repositories;
+using FluentValidation; // IMPORTANTE: Para reconhecer o IValidator
 using Microsoft.AspNetCore.Mvc;
 
 namespace FilmesApi.Controllers;
 
 [ApiController]
-[Route("[controller]")] // A rota será api/filme
+[Route("[controller]")]
 public class FilmeController : ControllerBase
 {
     private readonly IFilmeRepository _repository;
+    private readonly IValidator<Filme> _validator; // Adicionado o validador aqui
 
-    public FilmeController(IFilmeRepository repository)
+    // O construtor deve receber o repositório E o validador
+    public FilmeController(IFilmeRepository repository, IValidator<Filme> validator)
     {
         _repository = repository;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -32,8 +36,14 @@ public class FilmeController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] Filme filme)
     {
+        
+        var validationResult = await _validator.ValidateAsync(filme);
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.ToDictionary());
+        }
+
         var sucesso = await _repository.CriarAsync(filme);
-        if (!sucesso) return BadRequest();
         return CreatedAtAction(nameof(GetById), new { id = filme.Id }, filme);
     }
 
@@ -41,8 +51,15 @@ public class FilmeController : ControllerBase
     public async Task<IActionResult> Update(int id, [FromBody] Filme filme)
     {
         filme.Id = id;
+        
+        var validationResult = await _validator.ValidateAsync(filme);
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.ToDictionary());
+        }
+
         var sucesso = await _repository.AtualizarAsync(filme);
-        return sucesso ? NoContent() : NotFound();
+        return Ok(new { mensagem = "Filme Editado com sucesso!" });
     }
 
     [HttpDelete("{id}")]
