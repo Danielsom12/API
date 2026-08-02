@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/home/daniel-sammartano-linux/projetos/API_DAPPER/API/ApiFilmesDapper/ApiFilmesDapper.csproj": {}
+    "/home/dan/Área de trabalho/desenvolvimento/api/API/ApiFilmesDapper/ApiFilmesDapper.csproj": {}
   },
   "projects": {
-    "/home/daniel-sammartano-linux/projetos/API_DAPPER/API/ApiFilmesDapper/ApiFilmesDapper.csproj": {
+    "/home/dan/Área de trabalho/desenvolvimento/api/API/ApiFilmesDapper/ApiFilmesDapper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/daniel-sammartano-linux/projetos/API_DAPPER/API/ApiFilmesDapper/ApiFilmesDapper.csproj",
+        "projectUniqueName": "/home/dan/Área de trabalho/desenvolvimento/api/API/ApiFilmesDapper/ApiFilmesDapper.csproj",
         "projectName": "ApiFilmesDapper",
-        "projectPath": "/home/daniel-sammartano-linux/projetos/API_DAPPER/API/ApiFilmesDapper/ApiFilmesDapper.csproj",
-        "packagesPath": "/home/daniel-sammartano-linux/.nuget/packages/",
-        "outputPath": "/home/daniel-sammartano-linux/projetos/API_DAPPER/API/ApiFilmesDapper/obj/",
+        "projectPath": "/home/dan/Área de trabalho/desenvolvimento/api/API/ApiFilmesDapper/ApiFilmesDapper.csproj",
+        "packagesPath": "/home/dan/.nuget/packages/",
+        "outputPath": "/home/dan/Área de trabalho/desenvolvimento/api/API/ApiFilmesDapper/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/daniel-sammartano-linux/.nuget/NuGet/NuGet.Config"
+          "/home/dan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://gitlab.com/api/v4/projects/26749643/packages/nuget/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -38,10 +38,12 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "Dapper": {
@@ -80,6 +82,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.29, 8.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.29, 8.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.29, 8.0.29]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -88,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/daniel-sammartano-linux/.dotnet/sdk/8.0.419/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
