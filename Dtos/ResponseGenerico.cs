@@ -1,7 +1,7 @@
 using System.Net;
 using System.Dynamic;
 
-namespace IpController.ControlleerBase
+namespace ApiIp.Dtos
 
 {
     public class ResponseGenerico<T> where T : class

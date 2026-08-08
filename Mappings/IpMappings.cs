@@ -1,6 +1,6 @@
 using AutoMapper;
 using ApiIp.Models;
-using IpController.ControlleerBase;
+using ApiIp.Dtos;
 
 namespace ApiIp.Mappings;
 

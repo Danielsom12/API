@@ -1,6 +1,6 @@
 @ApiIp_HostAddress = http://localhost:5151
 
-GET {{ApiIp_HostAddress}}/weatherforecast/
+GET {{ApiIp_HostAddress}}/v1/Ip/8.8.8.8
 Accept: application/json
 
 ###

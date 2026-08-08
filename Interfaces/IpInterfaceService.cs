@@ -1,5 +1,5 @@
 
-using IpController.ControlleerBase;
+using ApiIp.Dtos;
 
 namespace ApiIp.Interfaces;
 

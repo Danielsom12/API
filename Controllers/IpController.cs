@@ -1,7 +1,7 @@
 using ApiIp.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IpController.ControlleerBase
+namespace ApiIp.Controllers
 {
     [ApiController]
     [Route("v1/[controller]")]

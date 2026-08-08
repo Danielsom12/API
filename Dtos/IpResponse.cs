@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace IpController.ControlleerBase
+namespace ApiIp.Dtos
 {
     public class IpResponse
     {

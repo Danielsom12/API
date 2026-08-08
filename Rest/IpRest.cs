@@ -1,4 +1,4 @@
-using IpController.ControlleerBase; // <--- ONDE ESTÁ A CLASSE ResponseGenerico
+using ApiIp.Dtos;
 using ApiIp.Interfaces;
 using ApiIp.Models;
 using System.Dynamic;
@@ -32,10 +32,25 @@ public class ApiRest : IpInterfaceRest
             else
             {
                 response.CodigoHttp = responseIpApi.StatusCode;
-                response.ErroRetorno = JsonSerializer.Deserialize<ExpandoObject>(contentResp, _jsonOptions);
+                response.ErroRetorno = ParseErro(contentResp);
             }
         }
 
         return response;
+    }
+
+    private static ExpandoObject ParseErro(string contentResp)
+    {
+        try
+        {
+            return JsonSerializer.Deserialize<ExpandoObject>(contentResp, _jsonOptions)
+                ?? new ExpandoObject();
+        }
+        catch (JsonException)
+        {
+            dynamic erro = new ExpandoObject();
+            erro.mensagem = contentResp;
+            return erro;
+        }
     }
 }
